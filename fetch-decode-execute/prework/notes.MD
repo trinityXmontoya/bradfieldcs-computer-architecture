@@ -1,6 +1,9 @@
-1. A diagram you have drawn of the main components of a computer, and how they are connected; and
+**1.** A diagram you have drawn of the main components of a computer, and how they are connected; and
 
-2. A paragraph or two of prose describing your understanding of the fetch-decode-execute cycle, and how the relevant components of the computer are involved in each step.
+![main computer components](./main-computer-components.JPG)
+
+
+**2.** A paragraph or two of prose describing your understanding of the fetch-decode-execute cycle, and how the relevant components of the computer are involved in each step.
 
 The fetch-decode-execute cycle is how a computer executes a program.
 
