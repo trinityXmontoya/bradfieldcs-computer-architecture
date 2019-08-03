@@ -74,7 +74,8 @@
     0x03 :add
     0x04 :sub
     0xff :halt
-    0x17 :branch_if_equal})
+    0x17 :branch_if_equal
+    0x23 :add_immediate})
 
 (def instruction-len 18)
 (def instruction-start-index 0)
@@ -137,6 +138,15 @@
     (when (= reg1 reg2)
       (set-register program-counter-addr addr))))
 
+(defn add_immediate
+  "adds a number to a given register"
+  [args]
+  (println "adding imediate" args)
+  (let [reg (first args)
+        converted-input (convert-input (rest args))
+        current-val (get-register reg)]
+    (set-register reg (+ current-val converted-input))))
+
 ;-------------
 ;MAIN
 ;-------------
@@ -168,4 +178,5 @@
               :add             (execute-and-increment add             current-instruction-idx 3 first-arg second-arg)
               :sub             (execute-and-increment sub             current-instruction-idx 3 first-arg second-arg)
               :branch_if_equal (execute-and-increment branch-if-equal current-instruction-idx 4 first-arg second-arg third-arg)
+              :add_immediate   (execute-and-increment add_immediate   current-instruction-idx 4 first-arg second-arg third-arg)
               :halt            (halt))))))
