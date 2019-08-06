@@ -75,3 +75,23 @@ you're trying to represent in 4 bits what requires 5 bits so you would have an o
 
 largest:  2,147,483,647  ((2^32 / 2) - 1)
 smallest: -2,147,483,648 (2^32 / 2)
+
+# Byte ordering
+
+1. If you saw port 8000 represented as 0x1f40, would you conclude that TCP uses big-endian or little-endian integers?
+
+big-endian
+
+to determine the hexadecimal representation of 8000 you would do
+                           decimal -> hex
+remainder of 8000 / 256 -> 64      -> 40
+quotient  of 8000 / 256 -> 31      -> 1f
+
+since this is 0x1f40 and not 0x401f, it means the most significant byte (1f) comes first and is therefore big-endian.
+
+2. How would you represent port 3000?
+
+0x0bb8
+                           decimal  -> hex
+remainder of 3000 / 256 -> 184      -> b8
+quotient  of 3000 / 256 -> 11       -> 0b
