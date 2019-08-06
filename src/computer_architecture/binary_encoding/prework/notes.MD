@@ -95,3 +95,15 @@ since this is 0x1f40 and not 0x401f, it means the most significant byte (1f) com
                            decimal  -> hex
 remainder of 3000 / 256 -> 184      -> b8
 quotient  of 3000 / 256 -> 11       -> 0b
+
+# IEEE Floating Point
+
+1. What are the largest and smallest values representable with 64-bit floats?
+
+binary64 stores:
+01 bits for the sign
+11 bits for the exponent
+53 bits for the coefficient
+
+largest:   2^52
+smallest: -2^53
