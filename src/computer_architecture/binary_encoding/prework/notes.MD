@@ -37,3 +37,22 @@ For example
 #8FC808
 C8 (green) > 8F (red) > 08 (blue)
 but I don't know what color green + red produce (the answer is yellow!). I am only ok at [this game](http://yizzle.com/whatthehex)
+
+# Binary Addition & Overflow
+
+1. Test yourself by converting the numbers 12 and 9 to binary, adding the binary values together, and converting the result back to decimal to verify your calculation. Do these by hand.
+
+  0000 1001 -> 9
++ 0000 1100 -> 12
+= 0001 0101 -> 21
+
+2. What would the result be if it were constrained to 4 bits?
+
+you're trying to represent in 4 bits what requires 5 bits so you would have an overflow. It would incorrectly be stored as 0101 (or 5) bc that's all the digits it can fit.
+
+3. How many numbers can be represented in total with 4, 8, 16 or 32 bits respectively?
+
+4  -> 2^4  -> 16
+8  -> 2^8  -> 256
+16 -> 2^16 -> 65,536
+32 -> 2^32 -> 4,294,967,296
