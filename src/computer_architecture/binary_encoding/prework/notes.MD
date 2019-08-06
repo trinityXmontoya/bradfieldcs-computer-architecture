@@ -1,0 +1,39 @@
+# x15 and Hexadecimal numbers
+
+1. test yourself by converting the numbers 9, 136 and 247 to hexadecimal.
+9   -> 9
+136 -> 88
+247 -> f7
+ 
+2. In CSS, how many colors can be represented in the hexadecimal form?
+
+6 characters available x 4 bits that can be represented for each character
+= 24 bits
+= 2^24
+= 16,777,216
+
+(or using Oz's powers of 2 magic:
+2^24
+= 2^4 * 2^10 * 2^10
+= 16 * 1000 * 1000
+= ~16 mil
+)
+
+3. How about in the RGB form?
+
+Same as CSS! It's just a different representation using 0 - 255 for each of the colors (R,G,B)
+
+4. If you were given a hex code, could you guess the color?
+
+Perhaps. Off the top of my head I know
+#000000 is black
+#ffffff is white
+#ff0000 is red
+#00ff00 is green
+#0000ff is blue
+so the first two characters are red, the second two are green, and the third are blue. 
+
+For example
+#8FC808
+C8 (green) > 8F (red) > 08 (blue)
+but I don't know what color green + red produce (the answer is yellow!). I am only ok at [this game](http://yizzle.com/whatthehex)
