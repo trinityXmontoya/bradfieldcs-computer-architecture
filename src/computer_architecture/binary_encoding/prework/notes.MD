@@ -56,3 +56,22 @@ you're trying to represent in 4 bits what requires 5 bits so you would have an o
 8  -> 2^8  -> 256
 16 -> 2^16 -> 65,536
 32 -> 2^32 -> 4,294,967,296
+
+# Why We Use Two’s Complement
+
+1. test yourself by converting the numbers 12 and -9 to binary using the two’s complement representation, adding the binary values together, and converting the result back to decimal. 
+
+   01100 -> +12
++  10111 -> -09
+=  00011 -> +03
+
+2. Similarly compute -3 - 4 ("negative three, minus four"). 
+   1101 -> -03
+-  0100 -> +04
+=  1001 -> -07
+
+3. What are the largest and smallest numbers representable in 32 bit 2’s complement?
+32 bits -> 2^32 #s,
+
+largest:  2,147,483,647  ((2^32 / 2) - 1)
+smallest: -2,147,483,648 (2^32 / 2)
