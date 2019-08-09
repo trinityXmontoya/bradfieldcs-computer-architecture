@@ -107,3 +107,21 @@ binary64 stores:
 
 largest:   2^52
 smallest: -2^53
+
+# The Unicode Miracle
+
+1. Is there any additional space cost to encoding a purely ASCII document as UTF-8?
+
+Most space in ASCII is wasted because it starts at 65. And then lowercase starts 32 later rather than 26.
+
+2. What are the pros and cons detriments of UTF-8 compared to another encoding for Unicode such as UTF-32?
+
+The number after UTF-X indicates the max number of bits used to store characters (ex. UTF-8 -> 8 bits -> 1 byte, UTF-32 -> 32 bits -> 4 bytes).
+
+UTF-32 doesn't require decoding and directly tells you how long string is.
+
+UTF-8: Variable-width encoding, backwards compatible with ASCII. ASCII characters (U+0000 to U+007F) take 1 byte, code points U+0080 to U+07FF take 2 bytes, code points U+0800 to U+FFFF take 3 bytes, code points U+10000 to U+10FFFF take 4 bytes. Good for English text, not so good for Asian text.
+UTF-16: Variable-width encoding. Code points U+0000 to U+FFFF take 2 bytes, code points U+10000 to U+10FFFF take 4 bytes. Bad for English text, good for Asian text.
+UTF-32: Fixed-width encoding. All code points take four bytes. An enormous memory hog, but fast to operate on. Rarely used.
+
+src: https://stackoverflow.com/questions/496321/utf-8-utf-16-and-utf-32
