@@ -21,6 +21,6 @@ head: .asciiz  "The volume of this cylinder is:\n"
 print:la   $a0, head        # load address of print heading
       li   $v0, 4           # specify Print String serv
       syscall               # print heading
-      lw   $a0,             # load volume for syscall
+      lw   $a0, ($s0)       # load volume for syscall
       li   $v0, 1           # specify Print Integer service
       syscall               # print volume number
